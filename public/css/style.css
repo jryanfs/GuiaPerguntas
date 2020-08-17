@@ -1,0 +1,16 @@
+body{
+    background-color: #eceff1;
+}
+nav{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+nav img{
+    width: 40%;
+    margin: 5px;
+    padding-left: 70px;
+}
+.pergunta{
+    padding-left: 30%;
+}
