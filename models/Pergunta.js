@@ -1,9 +1,7 @@
 const sequelize = require('sequelize');
-const connection = require('./database');
+const connection = require('../database/connection');
 
-
-
-const pergunta = connection.define('pergunta',{
+const question = connection.define('questions',{
     title:{
         type: sequelize.STRING,
         allowNull: false
@@ -12,13 +10,9 @@ const pergunta = connection.define('pergunta',{
         type: sequelize.TEXT,
         allowNull: false
     }
-
 });
 
-
-pergunta.sync({ force: false }).then(()=>{
-    console.log("Tabela criada.")
-})
+question.sync({ force: false });
 
 
-module.exports = pergunta;
+module.exports = question;
